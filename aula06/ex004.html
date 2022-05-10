@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>primeiro programa</title>
+    <style>
+            body{
+                background-color: rgb(76, 76, 146);
+                color: white;
+                font:normal 20pt Arial;
+            }
+            h1{
+                color: rgb(255, 217, 0);
+            }
+
+    </style>
+</head>
+<body>
+   <h1> olá, mundo</h1>
+   <p>Já me livrei da maldição</p>
+   <script>
+       var nome = window.prompt('Digite o seu nome')
+       var idade = window.prompt('Digite a sua idade')
+       var peso =Number(window.prompt('Digite o seu peso (separe utilizando ponto)'))
+       var altura =Number(window.prompt('Digite a sua altura(separe utilizando ponto)'))
+       var IMC = peso/(altura*altura)
+       document.write(`olá <strong>${nome}</strong>, o seu nome tem ${nome.length} letras <br>`)
+       document.writeln(`seu nome em letras maiuscúlas fica assim ${nome.toUpperCase()}<br>`)
+       document.writeln(`seu nome em letras minúsculas fica assim ${nome.toLowerCase()}<br>`)
+       document.write(`${nome}, você tem ${idade} anos <br>`)
+       document.write(`a sua altura é de ${altura.toFixed(2).replace('.',',')} e o seu peso é de ${peso.toFixed(2).replace('.',',')}<br>`)
+       document.write(`o seu IMC é ${IMC.toFixed(2)}<br>`)
+       if (IMC>20) {
+           document.write('Voce está em estado de sobrepeso');
+       }
+</script>
+</body>
+</html>
